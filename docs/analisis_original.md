@@ -4,7 +4,7 @@
 
 ---
 <img width="1022" height="768" alt="Captura de pantalla 2026-06-11 a la(s) 5 36 47 p m" src="https://github.com/user-attachments/assets/979709f4-90e9-4f71-bb40-6493e9f383c5" />
-*Figura 1.1. CSV dataset 1.*
+**Figura 1.1.** CSV dataset 1.
 
 #### Estructura Original 
 El dataset presenta un modelo completamente desnormalizado diseñado para un ánalisis rápido, pero ineficiente para objetivos mas avanzados.
@@ -25,7 +25,7 @@ El dataset presenta un modelo completamente desnormalizado diseñado para un án
 | s5 | TV Show | Kota Factory | *NaN* | Mayur More, Jitendra Kumar... | India | 2021 | TV-MA | International TV Shows... |
 
 <img width="997" height="128" alt="Captura de pantalla 2026-06-11 a la(s) 5 35 55 p m" src="https://github.com/user-attachments/assets/65635e5f-ce32-46e9-acd1-510359f86e52" />
-*Figura 1.2. Datos representativos del dataset 1.*
+**Figura 1.2.** Datos representativos del dataset 1.
 
 #### Identificación de Problemas de Normalización 
 
@@ -38,8 +38,7 @@ El dataset presenta un modelo completamente desnormalizado diseñado para un án
 
 ### Diagrama de dependencias funcionales
 <img width="1434" height="2592" alt="Netflix_DF_Academico" src="https://github.com/user-attachments/assets/7e5f16ef-bf83-43b4-a1de-6b158daad957" />
-*Figura 1.3. Diagrama de dependencias funcionales del dataset 1.*
-
+**Figura 1.3.** Diagrama de dependencias funcionales del dataset 1.
 
 ---
 
@@ -48,7 +47,7 @@ El dataset presenta un modelo completamente desnormalizado diseñado para un án
 
 ---
 <img width="1034" height="726" alt="Captura de pantalla 2026-06-11 a la(s) 5 40 16 p m" src="https://github.com/user-attachments/assets/5f0a2f1a-5d71-481d-b47e-9292dd620caa" />
-*Figura 2.1. CSV dataset 2.*
+**Figura 2.1.** CSV dataset 2.
 
 
 #### Estructura Original
@@ -71,7 +70,7 @@ Este conjunto de datos registra transacciones de ventas minoristas en línea. A 
 | 536367 | 84879 | ASSORTED COLOUR BIRD ORNAMENT | 32 | 12/01/2010 08:34 | 1.69 | 13047 | United Kingdom |
 
 <img width="991" height="129" alt="Captura de pantalla 2026-06-11 a la(s) 5 40 31 p m" src="https://github.com/user-attachments/assets/88952b13-1b12-429e-935e-a7233ff75a8d" />
-*Figura 2.2. Datos representativos del dataset 2.*
+**Figura 2.2.** Datos representativos del dataset 2.
 
 #### Identificación de Problemas de Normalización
 * **Violación de 2FN (Dependencias Parciales):** Para identificar una fila única de manera precisa, necesitamos una clave primaria compuesta por `(InvoiceNo, StockCode)`. Sin embargo, atributos como `Description` y `UnitPrice` dependen únicamente de `StockCode` (el producto), no de la factura. De igual manera, `InvoiceDate` depende solo de `InvoiceNo`.
@@ -86,14 +85,14 @@ Este conjunto de datos registra transacciones de ventas minoristas en línea. A 
 
 ### Diagrama de dependencias funcionales
 <img width="2942" height="1271" alt="Ecommerce_DF_Academico" src="https://github.com/user-attachments/assets/b98ab602-df07-49b2-a507-e668c7d59c20" />
-*Figura 2.3. Diagrama de dependencias funcionales del dataset 2.*
+**Figura 2.3.** Diagrama de dependencias funcionales del dataset 2.
 
 
 ## Dataset 3: Hospital Patient Records
 
 ---
 <img width="1022" height="768" alt="Captura de pantalla 2026-06-11 a la(s) 5 40 51 p m" src="https://github.com/user-attachments/assets/e41d18bb-e103-44df-a0cc-98c24ac845f3" />
-*Figura 3.1. CSV dataset 3.*|
+**Figura 3.1.** CSV dataset 3.
 
 #### Estructura Original
 Este dataset es un registro clínico masivo en formato de "tabla plana". Contiene información demográfica de pacientes combinada con métricas detalladas de signos vitales, diagnósticos y características de la Unidad de Cuidados Intensivos (UCI) por cada encuentro médico.
@@ -116,7 +115,7 @@ Este dataset es un registro clínico masivo en formato de "tabla plana". Contien
 | 92056 | 34377 | 33 | 19.0 | M | *NaN* | 91 | Med-Surg ICU | 119.0 | 0 |
 
 <img width="969" height="134" alt="Captura de pantalla 2026-06-11 a la(s) 5 40 59 p m" src="https://github.com/user-attachments/assets/0cbd75ff-873e-44eb-b250-96d34afe1602" />
-*Figura 3.2. Datos representativos del dataset 3.*
+**Figura 3.2.** Datos representativos del dataset 3.
 
 #### Identificación de Problemas de Normalización
 A diferencia de Netflix, este dataset no tiene múltiples valores separados por comas, pero sufre de una severa redundancia estructural debido a su diseño de tabla ancha y mezcla de entidades.
@@ -133,6 +132,6 @@ A diferencia de Netflix, este dataset no tiene múltiples valores separados por 
 
 ### Diagrama de dependencias funcionales
 <img width="2883" height="2142" alt="Hospital_DF_Academico" src="https://github.com/user-attachments/assets/ef8619d8-ad53-4b92-b889-7f38da154537" />
-*Figura 3.3. Diagrama de dependencias funcionales del dataset 3.*
+**Figura 3.3.** Diagrama de dependencias funcionales del dataset 3.
 
 ---
