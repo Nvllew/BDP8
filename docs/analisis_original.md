@@ -3,6 +3,9 @@
 ## Dataset 1: Netflix Movies and TV Shows
 
 ---
+
+*Figura 1.1. CSV dataset 1.*
+
 #### Estructura Original 
 El dataset presenta un modelo completamente desnormalizado diseñado para un ánalisis rápido, pero ineficiente para objetivos mas avanzados.
 
@@ -23,6 +26,8 @@ El dataset presenta un modelo completamente desnormalizado diseñado para un án
 | s5 | TV Show | Kota Factory | *NaN* | Mayur More, Jitendra Kumar... | India | 2021 | TV-MA | International TV Shows... |
 
 
+*Figura 1.2. Datos representativos del dataset 1.*
+
 #### Identificación de Problemas de Normalización 
 
 * **Violación de 1FN:** Múltiples columnas (`director`, `cast`, `country`, `listed_in`) contienen datos multivaluados separados por comas.
@@ -32,11 +37,20 @@ El dataset presenta un modelo completamente desnormalizado diseñado para un án
 * **Inserción:** No es posible registrar a un actor o director en el sistema sin que esté asociado a un `show` específico.
 * **Eliminación:** Si se elimina el único `show` de un director específico de la plataforma, el sistema pierde el registro de la existencia de dicho director.
 
+### Diagrama de dependencias funcionales
+
+*Figura 1.3. Diagrama de dependencias funcionales del dataset 1.*
+
+
 ---
 
+ 
 ## Dataset 2: E-commerce Sales Data
 
 ---
+
+*Figura 2.1. CSV dataset 2.*
+
 
 #### Estructura Original
 Este conjunto de datos registra transacciones de ventas minoristas en línea. A diferencia del dataset de Netflix, este es un modelo transaccional donde el problema principal no son las listas separadas por comas, sino la repetición masiva de datos  junto con datos de transacciones.
@@ -57,6 +71,8 @@ Este conjunto de datos registra transacciones de ventas minoristas en línea. A 
 | 536366 | 22633 | HAND WARMER UNION JACK | 6 | 12/01/2010 08:28 | 1.85 | 17850 | United Kingdom |
 | 536367 | 84879 | ASSORTED COLOUR BIRD ORNAMENT | 32 | 12/01/2010 08:34 | 1.69 | 13047 | United Kingdom |
 
+*Figura 2.2. Datos representativos del dataset 2.*
+
 #### Identificación de Problemas de Normalización
 * **Violación de 2FN (Dependencias Parciales):** Para identificar una fila única de manera precisa, necesitamos una clave primaria compuesta por `(InvoiceNo, StockCode)`. Sin embargo, atributos como `Description` y `UnitPrice` dependen únicamente de `StockCode` (el producto), no de la factura. De igual manera, `InvoiceDate` depende solo de `InvoiceNo`.
 * **Violación de 3FN (Dependencias Transitivas):** El atributo `Country` (País) no depende directamente de la factura ni del producto, sino que depende de `CustomerID` (el país pertenece al cliente, y el cliente realiza la factura).
@@ -70,9 +86,16 @@ Este conjunto de datos registra transacciones de ventas minoristas en línea. A 
 * **Anomalía de Eliminación:** Si un cliente cancela su única compra y eliminamos el registro de la factura, perderíamos también la información del cliente (`CustomerID`, `Country`).
 
 
+### Diagrama de dependencias funcionales
+
+*Figura 2.3. Diagrama de dependencias funcionales del dataset 2.*
+
+
 ## Dataset 3: Hospital Patient Records
 
 ---
+
+*Figura 3.1. CSV dataset 3.*|
 
 #### Estructura Original
 
@@ -95,6 +118,8 @@ Este dataset es un registro clínico masivo en formato de "tabla plana". Contien
 | 79267 | 46918 | 118 | 81.0 | F | 22.64 | 92 | CTICU | 203.0 | 0 |
 | 92056 | 34377 | 33 | 19.0 | M | *NaN* | 91 | Med-Surg ICU | 119.0 | 0 |
 
+*Figura 3.2. Datos representativos del dataset 3.*
+
 #### Identificación de Problemas de Normalización
 A diferencia de Netflix, este dataset no tiene múltiples valores separados por comas, pero sufre de una severa redundancia estructural debido a su diseño de tabla ancha y mezcla de entidades.
 
@@ -107,6 +132,10 @@ A diferencia de Netflix, este dataset no tiene múltiples valores separados por 
 * **Anomalías Identificadas:**
 * **Anomalía de Actualización:** Si se corrige la estatura (`height`) o fecha de nacimiento/edad de un paciente, el sistema obliga a buscar y actualizar todos los encuentros históricos de ese `patient_id` para evitar discrepancias.
 * **Anomalía de Inserción:** No se puede dar de alta a un nuevo paciente en el sistema hasta que tenga un encuentro en la UCI (`encounter_id`), ya que este último actúa como identificador de la fila transaccional.
+
+### Diagrama de dependencias funcionales
+
+*Figura 3.3. Diagrama de dependencias funcionales del dataset 3.*
 
 
 ---
