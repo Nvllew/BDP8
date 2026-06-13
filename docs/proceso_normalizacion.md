@@ -562,3 +562,42 @@ Así lucen los datos interactuando sin redundancia de infraestructura:
 | --- | --- | --- | --- | --- |
 | 66154 | 25312 | 92 | 119.0 | 0 |
 | 114252 | 59342 | 90 | 118.0 | 0 |
+
+---
+
+### Cuadros Comparativos de Normalización
+
+A continuación, se presenta la evolución de la complejidad estructural, la redundancia y la integridad de los datos para cada uno de los datasets trabajados.
+
+#### Dataset 1: Netflix Movies and TV Shows
+
+| Aspecto | Original | 1FN | 2FN | 3FN |
+| --- | --- | --- | --- | --- |
+| **Número de tablas** | 1 | 5 | 9 | 11 |
+| **Total de columnas** | 12 | 16 | 24 | 26 |
+| **Redundancia estimada (%)** | > 85% | > 95% | ~ 30% | < 5% |
+| **Anomalías identificadas** | Ins. / Act. / Elim. | Ins. / Act. / Elim. | Act. / Elim. | Ninguna |
+| **Integridad referencial** | Nula | Nula (solo PKs) | Parcial | Completa (FKs estrictas) |
+
+
+#### Dataset 2: E-commerce Sales Data
+
+| Aspecto | Original | 1FN | 2FN | 3FN |
+| --- | --- | --- | --- | --- |
+| **Número de tablas** | 1 | 1 | 3 | 4 |
+| **Total de columnas** | 8 | 8 | 10 | 11 |
+| **Redundancia estimada (%)** | > 75% | > 75% | ~ 20% | < 5% |
+| **Anomalías identificadas** | Ins. / Act. / Elim. | Ins. / Act. / Elim. | Act. / Elim. | Ninguna |
+| **Integridad referencial** | Nula | Nula (solo PK) | Parcial | Completa (FKs estrictas) |
+
+
+#### Dataset 3: Hospital Patient Records
+
+| Aspecto | Original | 1FN | 2FN | 3FN |
+| --- | --- | --- | --- | --- |
+| **Número de tablas** | 1 | 1 | 2 | 4 |
+| **Total de columnas** | 85 | 85 | 86 | 89 |
+| **Redundancia estimada (%)** | > 60% | > 60% | ~ 25% | < 5% |
+| **Anomalías identificadas** | Ins. / Act. / Elim. | Ins. / Act. / Elim. | Act. / Elim. | Ninguna |
+| **Integridad referencial** | Nula | Nula (solo PK) | Parcial | Completa (FKs estrictas) |
+
