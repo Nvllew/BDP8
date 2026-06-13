@@ -7,7 +7,7 @@
 
   <br>
 
-  <b>Práctica 4</b><br>
+  <b>Práctica 8</b><br>
   <b>Normalización</b>
 
   <br>
