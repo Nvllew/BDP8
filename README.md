@@ -5,32 +5,32 @@
   <h2>Instituto Politécnico Nacional</h2>
   <h2>Escuela Superior de Cómputo</h2>
 
-  <br><br><br><br>
+  <br><br>
 
   <b>Práctica 4</b><br>
   <b>Normalización</b>
 
-  <br><br><br>
+  <br>
 
   <b>Alumno:</b><br>
   Olate Tomás Kevin Saúl
 
-  <br><br>
+  <br>
 
   <b>Profesor:</b><br>
   Gabriel Hurtado Avilés
 
-  <br><br>
+  <br>
 
   <b>Unidad de Aprendizaje:</b><br>
   Bases de Datos
 
-  <br><br>
+  <br>
 
   <b>Grupo:</b><br>
   3BV1
 
-  <br><br>
+  <br>
 </div>
 
 ---# Práctica de Normalización de Bases de Datos 
