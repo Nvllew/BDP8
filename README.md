@@ -1,4 +1,39 @@
-# Práctica de Normalización de Bases de Datos 
+<div align="center">
+  <img src="https://images.seeklogo.com/logo-png/7/2/ipn-logo-png_seeklogo-73340.png" align="left" width="90" alt="Logo IPN" />
+  <img src="https://www.escom.ipn.mx/x/ee2021/images/galeriaEE2021/escudo_ESCOM.png" align="right" width="120" alt="Logo ESCOM" />
+  
+  <h2>Instituto Politécnico Nacional</h2>
+  <h2>Escuela Superior de Cómputo</h2>
+
+  <br><br><br><br>
+
+  <b>Práctica 4</b><br>
+  <b>Normalización</b>
+
+  <br><br><br>
+
+  <b>Alumno:</b><br>
+  Olate Tomás Kevin Saúl
+
+  <br><br>
+
+  <b>Profesor:</b><br>
+  Gabriel Hurtado Avilés
+
+  <br><br>
+
+  <b>Unidad de Aprendizaje:</b><br>
+  Bases de Datos
+
+  <br><br>
+
+  <b>Grupo:</b><br>
+  3BV1
+
+  <br><br>
+</div>
+
+---# Práctica de Normalización de Bases de Datos 
 
 Este proyecto implementa un pipeline automatizado para la transformación y normalización de conjuntos de datos planos (CSV) hacia modelos relacionales estructurados en **1FN, 2FN y 3FN**. Todo el flujo de procesamiento, generación de esquemas (DDL) e inserción masiva (DML) se ejecuta de forma programática utilizando Python y contenedores Docker.
 
